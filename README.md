@@ -2,7 +2,7 @@
 
 It is a mini full stack php project. Where we can add user and delete user. 
 
-##  ফিচারসমূহ:
+##  Features:
 - **CRUD Operations**: User name, add email and delete.
 - **Modern UI**: using Bootstrap 5.
 - **Secure Backend**:using PHP PDO ব্যfor database connection. 
