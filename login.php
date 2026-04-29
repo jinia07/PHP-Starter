@@ -7,17 +7,14 @@ if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // ডাটাবেস থেকে ইউজারকে খোঁজা
     $stmt = $pdo->prepare("SELECT * FROM admins WHERE username = ?");
     $stmt->execute([$username]);
     $admin = $stmt->fetch();
 
-    // পাসওয়ার্ড ভেরিফাই করা এবং সেশন সেট করা
     if ($admin && password_verify($password, $admin['password'])) {
         $_SESSION['admin_logged_in'] = true;
         $_SESSION['admin_user'] = $admin['username'];
         
-        // লগইন সফল হলে সরাসরি ড্যাশবোর্ডে পাঠিয়ে দেওয়া
         header("Location: user_dashboard.php");
         exit();
     } else {

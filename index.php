@@ -6,7 +6,6 @@ if (!isset($_SESSION['admin_logged_in'])) {
 }
 include 'db.php';
 
-// ১. ডাটা সেভ করা
 if (isset($_POST['save'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -15,7 +14,6 @@ if (isset($_POST['save'])) {
     header("Location: index.php");
 }
 
-// ২. ডাটা ডিলিট করা
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     $sql = "DELETE FROM users WHERE id = ?";
@@ -23,7 +21,6 @@ if (isset($_GET['delete'])) {
     header("Location: index.php");
 }
 
-// ৩. সার্চ ফিচার (খুঁজে বের করা)
 $search = "";
 if (isset($_GET['search'])) {
     $search = $_GET['search'];

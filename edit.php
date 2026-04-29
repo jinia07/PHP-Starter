@@ -1,13 +1,11 @@
 <?php
 include 'db.php';
 
-// ইউজারের বর্তমান ডাটা নিয়ে আসা
 $id = $_GET['id'];
 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
 $stmt->execute([$id]);
 $user = $stmt->fetch();
 
-// আপডেট করার কোড
 if (isset($_POST['update'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];

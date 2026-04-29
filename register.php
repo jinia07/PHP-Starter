@@ -4,7 +4,7 @@ $msg = "";
 
 if (isset($_POST['register'])) {
     $username = $_POST['username'];
-    // পাসওয়ার্ডটি হ্যাশ (Hash) করে সেভ করা হচ্ছে নিরাপত্তার জন্য
+    
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO admins (username, password) VALUES (?, ?)";
