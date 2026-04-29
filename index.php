@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['admin_logged_in'])) {
+    header("Location: login.php");
+    exit();
+}
 include 'db.php';
 
 // ১. ডাটা সেভ করা
@@ -92,6 +97,7 @@ if (isset($_GET['search'])) {
                                 <td><?= $user['name'] ?></td>
                                 <td><?= $user['email'] ?></td>
                                 <td class="text-center">
+                                    <a href="logout.php" class="btn btn-danger btn-sm">Logout</a>
                                     <a href="edit.php?id=<?= $user['id'] ?>" class="btn btn-sm btn-info text-white">Edit</a>
                                     <a href="index.php?delete=<?= $user['id'] ?>" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete</a>
                                 </td>
