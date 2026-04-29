@@ -15,8 +15,8 @@ It is a mini full stack php project. Where we can add user and delete user.
 
 ##  Setup Instructions:
 1. install php and mysql.
-২. Create a database`my_project`.
-৩. Then run SQL code and make `users' table:
+2. Create a database`my_project`.
+3. Then run SQL code and make `users' table:
    ```sql
    CREATE TABLE users (
        id INT AUTO_INCREMENT PRIMARY KEY,
