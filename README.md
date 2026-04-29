@@ -1,20 +1,20 @@
-# 🚀 Professional User Management System
+#  User Management System
 
 A mini Full-Stack PHP project designed for managing user data with a secure authentication system. This project demonstrates CRUD operations, secure database handling, and a modern responsive UI.
 
-## ✨ Features
+##Features
 * **Secure Authentication:** Admin/User login and registration with password encryption.
 * **CRUD Operations:** Effortlessly add, view, update, and delete user records.
 * **Modern UI:** Clean and responsive interface built with **Bootstrap 5**.
 * **Secure Backend:** Uses **PHP PDO** to prevent SQL injection and ensure database security.
 * **Protected Routes:** Only logged-in users can access the dashboard and user list.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 * **Frontend:** HTML5, CSS3, Bootstrap 5
 * **Backend:** PHP 8.x
 * **Database:** MySQL
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 ### 1. Prerequisites
 Ensure you have **PHP** and **MySQL** installed on your system.
